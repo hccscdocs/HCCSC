@@ -263,8 +263,8 @@ function FindProxyForURL(url, host)
         if (dnsDomainIs(host, ".pingdom.net")){return "DIRECT";}
 
 // We want to send all Apple  DIRECT 4
-        if (dnsDomainIs(host, ".cdn-apple.com")){return "DIRECT";
-}
+        if (dnsDomainIs(host, ".cdn-apple.com")){return "DIRECT";}
+
 // We want to send all Apple  DIRECT 5
         if (dnsDomainIs(host, ".mzstatic.com")){return "DIRECT";}
         
