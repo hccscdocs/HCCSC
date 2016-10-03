@@ -1,10 +1,10 @@
-function FindProxyForURL(url, host) 
+function FindProxyForURL(url, host)
 {
-// pacver = "hccsc.k12.in.us MS PAC file version 3.24P, Oct 2nd, 2016-JFH";
+// pacver = "hccsc.k12.in.us MS PAC file version 3.26P, Oct 2nd, 2016-JFH";
 
 // Set the default proxy variable that users get if they dont match
 // any more specific rule. 
-        proxy = "PROXY hccsc.mobile.websafe.ena.net:53128";
+var proxy = "PROXY hccsc.mobile.websafe.ena.net:53128";
 
 //Direct IP Listings
   
