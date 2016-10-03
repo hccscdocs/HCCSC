@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) 
 {
-// pacver = "hccsc.k12.in.us MS PAC file version 3.20P, Oct 2nd, 2016-JFH";
+// pacver = "hccsc.k12.in.us MS PAC file version 3.23P, Oct 2nd, 2016-JFH";
 
 // Set the default proxy variable that users get if they dont match
 // any more specific rule. 
@@ -39,6 +39,16 @@ function FindProxyForURL(url, host)
         if (isInNet(host, "172.22.0.0", "255.255.0.0")){return "DIRECT";}
 
 // DIRECT URL Lists
+
+// Base URL Whitelisting
+        if (shExpMatch(host, "fw.hccsc.k12.in.us")){return "DIRECT";}
+        if (shExpMatch(host, "*.producturlsupport.com")){return "DIRECT";}
+        if (shExpMatch(host, "*.launchpadtoys.com")){return "DIRECT";}
+        if (shExpMatch(host, "*.prezi.com")){return "DIRECT";}
+        if (shExpMatch(host, "*.raz-kids.com")){return "DIRECT";}
+        if (shExpMatch(host, "*.ipchicken.com")){return "DIRECT";}
+        if (shExpMatch(host, "*.api.croak.it")){return "DIRECT";}
+        if (shExpMatch(host, "*.quizlet.com")){return "DIRECT";}
 
 // We want to send all traffic to hccsc.k12.in.us browser direct
         if (dnsDomainIs(host, ".hccsc.k12.in.us")){return "DIRECT";}
