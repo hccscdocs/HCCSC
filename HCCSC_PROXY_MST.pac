@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) 
 {
-// pacver = "hccsc.k12.in.us MS PAC file version 3.23P, Oct 2nd, 2016-JFH";
+// pacver = "hccsc.k12.in.us MS PAC file version 3.24P, Oct 2nd, 2016-JFH";
 
 // Set the default proxy variable that users get if they dont match
 // any more specific rule. 
@@ -392,18 +392,6 @@ function FindProxyForURL(url, host)
 // We want to send all Connect ED
         if (dnsDomainIs(host, "mheducation.com")){return "DIRECT";}
 
-// do not proxy these sites
-        switch (host) {
-        case "fw.hccsc.k12.in.us":     // hccsc mdm device
-        case "www.producturlsupport.com": // hccsc Sock Puppets app
-        case "www.launchpadtoys.com": // toontastic app
-        case "prezi.com": // hccsc prezi service  
-        case "www.raz-kids.com": // Learning A-Z app 
-        case "www.ipchicken.com": //test ip   
-        case "api.croak.it": //Croak it app
-        case "quizlet.com": //Quizlet Site  
-        return "DIRECT";
-        break;}
 
 // Site-Service Block Section
            
