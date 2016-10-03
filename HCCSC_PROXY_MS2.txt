@@ -1,0 +1,18 @@
+function FindProxyForURL(url, host)
+{
+//pacver = "hccsc.k12.in.us MS PAC file version 3.40P, Oct 2nd, 2016-JFH";
+
+// Set the default proxy variable that users get if they dont match
+// any more specific rule. 
+	proxy = "PROXY hccsc.mobile.websafe.ena.net:53128";
+	  
+
+// We want to send all traffic to aleks.com browser direct
+	if (dnsDomainIs(host, ".aleks.com"))
+		return "DIRECT";
+       
+// Default return condition is the proxy, since it is assumed that everything
+// else is on the Internet.
+        return proxy;
+
+} // End of function

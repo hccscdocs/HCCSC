@@ -75,6 +75,23 @@ function FindProxyForURL(url, host) {
 		alert("PAC File Version:  " + pacver);
 	}
 
+	//These Google Sites need to not be proxied or they will not work
+        if (shExpMatch(host, "clients?.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "accounts.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "upload.video.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "translate.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "*.drive.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "drive.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "docs.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "sheets.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "slides.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "googledrive.com")){return "DIRECT";}
+        if (shExpMatch(host, "*.docs.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "gg.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "apis.google.com")){return "DIRECT";} 
+        if (shExpMatch(host, "script.google.com")){return "DIRECT";}   
+        if (shExpMatch(host, "*.c.docs.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "large-uploads.l.google.com")){return "DIRECT";}
 	// We want to send all traffic to hccsc.k12.in.us browser direct
 	if (dnsDomainIs(host, ".hccsc.k12.in.us")) {
   	   return "DIRECT";
