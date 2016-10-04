@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us MS PAC file version 3.31PT, Oct 3rd, 2016-JFH";
+    pacver = "hccsc.k12.in.us MS PAC file version 3.32PT, Oct 3rd, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -663,6 +663,10 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Connect ED6
 	if (dnsDomainIs(host, "ssl.gstatic.com")) {
+  	   return "DIRECT";
+	} 
+	// We want to send all Connect ED7
+	if (dnsDomainIs(host, ".mcgraw-hill.com")) {
   	   return "DIRECT";
 	} 
 
