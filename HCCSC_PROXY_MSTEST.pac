@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us MS PAC file version 3.27PT, Oct 3rd, 2016-JFH";
+    pacver = "hccsc.k12.in.us MS PAC file version 3.31PT, Oct 3rd, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -102,7 +102,6 @@ function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, ".apple.com")) {
   	   return "DIRECT";
 	}
-
 	// We want to send all traffic to apple.com browser direct
 	if (dnsDomainIs(host, ".icloud.com")) {
   	   return "DIRECT";
