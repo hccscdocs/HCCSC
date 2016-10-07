@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us MS PAC file version 3.36PT, Oct 6th, 2016-JFH";
+    pacver = "hccsc.k12.in.us MS PAC file version 3.40PT, Oct 7th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -688,6 +688,26 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Future City 4
 	if (dnsDomainIs(host, "tags.tiqcdn.com")) {
+  	   return "DIRECT";
+	} 
+
+	// We want to send all Future City 5
+	if (dnsDomainIs(host, ".origin.com")) {
+  	   return "DIRECT";
+	} 
+
+	// We want to send all Future City 6
+	if (dnsDomainIs(host, "consent.truste.com")) {
+  	   return "DIRECT";
+	} 
+
+	// We want to send all Future City 7
+	if (dnsDomainIs(host, "cdn.optimizely.com")) {
+  	   return "DIRECT";
+	} 
+
+	// We want to send all Future City 8
+	if (dnsDomainIs(host, ".youtube.com")) {
   	   return "DIRECT";
 	} 
 
