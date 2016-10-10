@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.11P, Oct 6th, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.12P, Oct 10th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -26,13 +26,14 @@ function FindProxyForURL(url, host) {
     	 if (isInNet(host, "10.0.0.0", "255.0.0.0")) {
         	  return "DIRECT";
      	}
+
 // Check for an internal 172.28.x IP address
     	 if (isInNet(host, "172.28.0.0", "255.255.0.0")) {
         	  return "DIRECT";
      	}
 // Check for an internal 172.17.x IP address
     	 if (isInNet(host, "172.17.0.0", "255.255.0.0")) {
-        	  return "DIRECT";
+        return "DIRECT";
      	}
 // Check for an internal 172.27.x IP address
     	 if (isInNet(host, "172.27.0.0", "255.255.0.0")) {
@@ -68,7 +69,7 @@ function FindProxyForURL(url, host) {
         	  return "PROXY 127.0.0.1:48890";
      	}
        }
-       
+
 	// Utility 
 	if ((host =="proxyinfo.hccsc.k12.in.us")) {
 		alert("Local IP address is: " + myIpAddress());
@@ -92,22 +93,22 @@ function FindProxyForURL(url, host) {
         if (shExpMatch(host, "script.google.com")){return "DIRECT";}   
         if (shExpMatch(host, "*.c.docs.google.com")){return "DIRECT";}
         if (shExpMatch(host, "large-uploads.l.google.com")){return "DIRECT";}
-		
+
 	// We want to send all traffic to hccsc.k12.in.us browser direct
 	if (dnsDomainIs(host, ".hccsc.k12.in.us")) {
   	   return "DIRECT";
 	}
-     
+
 	// We want to send all traffic to apple.com browser direct
 	if (dnsDomainIs(host, ".apple.com")) {
   	   return "DIRECT";
 	}
+
 	// We want to send all traffic to apple.com browser direct
 	if (dnsDomainIs(host, ".icloud.com")) {
   	   return "DIRECT";
 	}
 
-     
 	// We want to send all traffic to icloud.com browser direct ATT Datacenter
 	if (dnsDomainIs(host, ".synaptic.att.com")) {
   	   return "DIRECT";
@@ -125,7 +126,6 @@ function FindProxyForURL(url, host) {
   	   return "DIRECT";
 	}
 
-
 	// We want to send all traffic to aleks.com browser direct
 	if (dnsDomainIs(host, ".aleks.com")) {
   	   return "DIRECT";
@@ -135,7 +135,7 @@ function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, ".instructure.com")) {
   	   return "DIRECT";
 	}
- 
+
 	// We want to send all traffic to Follett Enlght App direct
 	if (dnsDomainIs(host, ".netsolssl.com")) {
   	   return "DIRECT";
@@ -170,7 +170,7 @@ function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, ".verisign.com")) {
   	   return "DIRECT";
 	}
- 
+
 	// We want to send all traffic to Duolingo app direct
 	if (dnsDomainIs(host, ".duolingo.com")) {
   	   return "DIRECT";
@@ -179,7 +179,7 @@ function FindProxyForURL(url, host) {
 	// We want to send all traffic to History Site direct
 	if (dnsDomainIs(host, ".history.com")) {
   	   return "DIRECT";
-	}            
+	}
 
 	// We want to send all traffic to Quizlet Site direct
 	if (dnsDomainIs(host, ".quizlet.com")){
@@ -190,7 +190,7 @@ function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, ".sumdog.com")){
   	   return "DIRECT";
 	}
- 
+
 	// We want to send all traffic to Sumdog Data Site direct
 	if (dnsDomainIs(host, ".newrelic.com")){
   	   return "DIRECT";
@@ -230,7 +230,7 @@ function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, ".ctb.com")) {
   	   return "DIRECT";
 	}
- 
+
 	// We want to send all traffic to CTB-ISTEP direct
 	if (dnsDomainIs(host, ".readspeaker.com")) {
   	   return "DIRECT";
@@ -254,13 +254,13 @@ function FindProxyForURL(url, host) {
  	// We want to send all traffic to Pearson eText 3 direct
 	if (dnsDomainIs(host, ".pearsoncmg.com")) {
   	   return "DIRECT";
-	}                                           
-  
+	}
+
  	// We want to send all traffic to Pearson eText 4 direct
 	if (dnsDomainIs(host, "view.etext.home2.pearsoncmg.com")) {
   	   return "DIRECT";
 	}                                           
-  
+
  	// We want to send all traffic to Acuity direct
 	if (dnsDomainIs(host, ".mhecdi.com")) {
   	   return "DIRECT";
@@ -370,7 +370,7 @@ function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, ".kahoot.it")) {
   	   return "DIRECT";
 	}
- 
+
 	// We want to send all traffic to HowTheMarketWorks
 	if (dnsDomainIs(host, ".howthemarketworks.com")) {
   	   return "DIRECT";
@@ -384,7 +384,7 @@ function FindProxyForURL(url, host) {
 	// We want to send all traffic to Kids Surval Site 
 	if (dnsDomainIs(host, ".equipped.com")) {
   	   return "DIRECT";
-	}	
+	}
 
 	// We want to send all Questar DIRECT
 	if (dnsDomainIs(host, ".mobileapp.questarai.com")) {
@@ -414,22 +414,22 @@ function FindProxyForURL(url, host) {
 	// We want to send all AR DIRECT 1
 	if (dnsDomainIs(host, ".renlearn.com")) {
   	   return "DIRECT";
-	}	
+	}
 
 	// We want to send all AR DIRECT 2
 	if (dnsDomainIs(host, ".renlearnrp.com")) {
   	   return "DIRECT";
-	}	
+	}
 
 	// We want to send all Follett Destiny  DIRECT 
 	if (dnsDomainIs(host, ".follettdestiny.com")) {
   	   return "DIRECT";
-	}	
+	}
 
 	// We want to send all Dropbox2 DIRECT 
 	if (dnsDomainIs(host, ".dropboxstatic.com")) {
   	   return "DIRECT";
-	}	
+	}
 
 	// We want to send all mobymax DIRECT 
 	if (dnsDomainIs(host, ".mobymax.com")) {
@@ -439,17 +439,17 @@ function FindProxyForURL(url, host) {
 	// We want to send all Dropbox2 DIRECT 
 	if (dnsDomainIs(host, ".dropboxusercontent.com")) {
   	   return "DIRECT";
-	}	
+	}
 
 	// We want to send all BrightWave DIRECT 
 	if (dnsDomainIs(host, ".audioengine.io")) {
   	   return "DIRECT";
-	}	
+	}
 
 	// We want to send all BrightWave DIRECT 2
 	if (dnsDomainIs(host, ".follettsoftware.com")) {
   	   return "DIRECT";
-	}	
+	}
 
 	// We want to send all PSApp  DIRECT 
 	if (dnsDomainIs(host, ".pearsonschoolsystems.com")) {
@@ -525,17 +525,17 @@ function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, "startpar.com")) {
   	   return "DIRECT";
 	}
- 	
+ 
 	// We want to send all Newsela.com DIRECT
 	if (dnsDomainIs(host, "newsela.com")) {
   	   return "DIRECT";
 	}
- 	
+ 
 	// We want to send all Newsela.com DIRECT
 	if (dnsDomainIs(host, "d284gedng9vuu0.cloudfront.net")) {
   	   return "DIRECT";
 	}
- 	
+
 	// We want to send all Wilderness-survive DIRECT
 	if (dnsDomainIs(host, ".wilderness-survival.net")) {
   	   return "DIRECT";
@@ -695,7 +695,7 @@ function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, ".blockpage.com")) {
   	   return "PROXY 127.0.0.1:48890";
 	}
- 
+
 	// Block Facebook
 	if (dnsDomainIs(host, ".facebook.com")) {
   	   return "PROXY 127.0.0.1:48890";
@@ -745,7 +745,7 @@ function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, "metacert.net")) {
   	   return "PROXY 127.0.0.1:48890";
 	}
- 
+
  	// Block metacert 3
 	if (dnsDomainIs(host, "metacert.org")) {
   	   return "PROXY 127.0.0.1:48890";
@@ -850,5 +850,5 @@ function FindProxyForURL(url, host) {
 	// else is on the Internet.
  
 	return proxy;
- 
+
 }
