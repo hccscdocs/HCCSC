@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 2.91, Oct 10th, 2016-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 2.92P, Oct 10th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -9,7 +9,7 @@ function FindProxyForURL(url, host) {
 
 	// Set the default proxy variable that users get if they dont match
 	// any more specific rule. 
-	proxy = "PROXY marion.mobile.websafe.ena.net:8090";
+	proxy = "PROXY hccsc.mobile.websafe.ena.net:53128";
 
 	// Loopback and localhost goes browser direct always. 
 
