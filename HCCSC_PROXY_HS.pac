@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 2.86, Sept 12th, 2016-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 2.88, Sept 21st, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -625,6 +625,16 @@ function FindProxyForURL(url, host) {
 	}   
 	// We want to send all Google Drive
 	if (dnsDomainIs(host, "googledrive.com")) {
+  	   return "DIRECT";
+	}   
+
+	// We want to send all HU
+	if (dnsDomainIs(host, "huntington.edu")) {
+  	   return "DIRECT";
+	}   
+	
+	// We want to send all HU Moodle
+	if (dnsDomainIs(host, "moodle.huntington.edu")) {
   	   return "DIRECT";
 	}   
 
