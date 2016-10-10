@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.12P, Oct 10th, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.17P, Oct 10th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -673,6 +673,76 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Thinkcentral
 	if (dnsDomainIs(host, ".thinkcentral.com")) {
+  	   return "DIRECT";
+	} 
+
+	// We want to send all Reflex Math
+	if (dnsDomainIs(host, ".reflexmath.com")) {
+  	   return "DIRECT";
+	} 
+
+	// We want to send all Raz-Kids
+	if (dnsDomainIs(host, ".kidsa-z.com")) {
+  	   return "DIRECT";
+	} 
+
+	// We want to send all HMH Books 1
+	if (dnsDomainIs(host, ".omtrdc.net")) {
+  	   return "DIRECT";
+	} 
+
+	// We want to send all HMH Books 2
+	if (dnsDomainIs(host, ".hmhco.com")) {
+  	   return "DIRECT";
+	} 
+
+	// We want to send all HMH Books 3
+	if (dnsDomainIs(host, ".hmco.com")) {
+  	   return "DIRECT";
+	} 
+
+	// We want to send all HMH Books 4
+	if (dnsDomainIs(host, ".hrw.com")) {
+  	   return "DIRECT";
+	} 
+
+	// We want to send all HMH Books 5
+	if (dnsDomainIs(host, ".hmhpub.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all HMH Books 6
+	if (dnsDomainIs(host, ".learnosity.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all HMH Books 7
+	if (dnsDomainIs(host, ".holtmcdougal.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all HMH Books 8
+	if (dnsDomainIs(host, ".wimba.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all HMH Books 9
+	if (dnsDomainIs(host, ".hmhnewsandnetworking.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all HMH Books 10
+	if (dnsDomainIs(host, ".classzone.com")) {
+  	   return "DIRECT";
+	} 
+
+	// We want to send all HMH Books 11
+	if (dnsDomainIs(host, ".hmcurrentevents.com")) {
+  	   return "DIRECT";
+	} 
+
+	// We want to send all HMH Books 12
+	if (dnsDomainIs(host, "link.brightcove.com")) {
   	   return "DIRECT";
 	} 
 
