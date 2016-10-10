@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.17P, Oct 10th, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.24P, Oct 10th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -93,6 +93,7 @@ function FindProxyForURL(url, host) {
         if (shExpMatch(host, "script.google.com")){return "DIRECT";}   
         if (shExpMatch(host, "*.c.docs.google.com")){return "DIRECT";}
         if (shExpMatch(host, "large-uploads.l.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "*.googleapis.com")){return "DIRECT";}
 
 	// We want to send all traffic to hccsc.k12.in.us browser direct
 	if (dnsDomainIs(host, ".hccsc.k12.in.us")) {
@@ -745,6 +746,31 @@ function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, "link.brightcove.com")) {
   	   return "DIRECT";
 	} 
+
+	// We want to send all Scholastic
+	if (dnsDomainIs(host, ".scholastic.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all SpellingCity
+	if (dnsDomainIs(host, ".spellingcity.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Sumdog 2
+	if (dnsDomainIs(host, ".gstatic.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all SumDog-Apple
+	if (dnsDomainIs(host, "apps.itunes.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Sumdog 3
+	if (dnsDomainIs(host, "pbs.twimg.com")) {
+  	   return "DIRECT";
+	}
 
 	 // do not proxy these sites
      switch (host) {
