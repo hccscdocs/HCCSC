@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us MS PAC file version 3.32PT, Oct 3rd, 2016-JFH";
+    pacver = "hccsc.k12.in.us MS PAC file version 3.33PT, Oct 10th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -92,39 +92,37 @@ function FindProxyForURL(url, host) {
         if (shExpMatch(host, "script.google.com")){return "DIRECT";}   
         if (shExpMatch(host, "*.c.docs.google.com")){return "DIRECT";}
         if (shExpMatch(host, "large-uploads.l.google.com")){return "DIRECT";}
-		
+        if (shExpMatch(host, "*.googleapis.com")){return "DIRECT";}
+        		
 	// We want to send all traffic to hccsc.k12.in.us browser direct
 	if (dnsDomainIs(host, ".hccsc.k12.in.us")) {
   	   return "DIRECT";
 	}
-     
+
 	// We want to send all traffic to apple.com browser direct
 	if (dnsDomainIs(host, ".apple.com")) {
   	   return "DIRECT";
 	}
+
 	// We want to send all traffic to apple.com browser direct
 	if (dnsDomainIs(host, ".icloud.com")) {
   	   return "DIRECT";
 	}
 
-     
 	// We want to send all traffic to icloud.com browser direct ATT Datacenter
 	if (dnsDomainIs(host, ".synaptic.att.com")) {
   	   return "DIRECT";
 	}
 
-     
 	// We want to send all traffic to icloud.com browser direct Amazon Datacenter
 	if (dnsDomainIs(host, ".amazonaws.com")) {
   	   return "DIRECT";
 	}
 
-     
 	// We want to send all traffic to icloud.com browser direct MS Datacenter 
 	if (dnsDomainIs(host, ".windows.net")) {
   	   return "DIRECT";
 	}
-
 
 	// We want to send all traffic to aleks.com browser direct
 	if (dnsDomainIs(host, ".aleks.com")) {
@@ -254,12 +252,12 @@ function FindProxyForURL(url, host) {
  	// We want to send all traffic to Pearson eText 3 direct
 	if (dnsDomainIs(host, ".pearsoncmg.com")) {
   	   return "DIRECT";
-	}                                           
+	}
   
  	// We want to send all traffic to Pearson eText 4 direct
 	if (dnsDomainIs(host, "view.etext.home2.pearsoncmg.com")) {
   	   return "DIRECT";
-	}                                           
+	} 
   
  	// We want to send all traffic to Acuity direct
 	if (dnsDomainIs(host, ".mhecdi.com")) {
@@ -299,7 +297,7 @@ function FindProxyForURL(url, host) {
 	// We want to send all traffic to Canvas Media 2
 	if (dnsDomainIs(host, "18127d8d28ff0fb6416865dcb5f8a25ca553cf8a.sdk.testflightapp.com")) {
   	   return "DIRECT";
-	}  
+	}
 
 	// Cavnas Client direct Oct 15
 	if (dnsDomainIs(host, "secure.gravatar.com")) {
@@ -669,6 +667,21 @@ function FindProxyForURL(url, host) {
 	if (dnsDomainIs(host, ".mcgraw-hill.com")) {
   	   return "DIRECT";
 	} 
+
+	// We want to send all MS iPad Access
+	if (dnsDomainIs(host, "app.adjust.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all MS iPad Access 2
+	if (dnsDomainIs(host, ".microsoft.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all SumDog-Apple
+	if (dnsDomainIs(host, "apps.itunes.com")) {
+  	   return "DIRECT";
+	}
 
 	 // do not proxy these sites
      switch (host) {
