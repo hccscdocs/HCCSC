@@ -1,0 +1,22 @@
+
+	// We want to send all MS iPad Access
+	if (dnsDomainIs(host, "app.adjust.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all MS iPad Access 2
+	if (dnsDomainIs(host, ".microsoft.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all SumDog-Apple
+	if (dnsDomainIs(host, "apps.itunes.com")) {
+  	   return "DIRECT";
+	}
+
+
+
+In Google Rules
+
+        if (shExpMatch(host, "*.googleapis.com")){return "DIRECT";}
+        
