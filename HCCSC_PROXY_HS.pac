@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 2.92P, Oct 10th, 2016-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 2.93P, Oct 10th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -60,7 +60,8 @@ function FindProxyForURL(url, host) {
         if (shExpMatch(host, "script.google.com")){return "DIRECT";}   
         if (shExpMatch(host, "*.c.docs.google.com")){return "DIRECT";}
         if (shExpMatch(host, "large-uploads.l.google.com")){return "DIRECT";}
-		
+        if (shExpMatch(host, "*.googleapis.com")){return "DIRECT";}
+        
 	// We want to send all traffic to hccsc.k12.in.us browser direct
 	if (dnsDomainIs(host, ".hccsc.k12.in.us")) {
   	   return "DIRECT";
@@ -677,6 +678,21 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Accuplacer
 	if (dnsDomainIs(host, ".accuplacer.org")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all MS iPad Access
+	if (dnsDomainIs(host, "app.adjust.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all MS iPad Access 2
+	if (dnsDomainIs(host, ".microsoft.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all SumDog-Apple
+	if (dnsDomainIs(host, "apps.itunes.com")) {
   	   return "DIRECT";
 	}
 
