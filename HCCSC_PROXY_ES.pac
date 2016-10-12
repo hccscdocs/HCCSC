@@ -260,7 +260,7 @@ function FindProxyForURL(url, host) {
  	// We want to send all traffic to Pearson eText 4 direct
 	if (dnsDomainIs(host, "view.etext.home2.pearsoncmg.com")) {
   	   return "DIRECT";
-	}                                           
+	}
 
  	// We want to send all traffic to Acuity direct
 	if (dnsDomainIs(host, ".mhecdi.com")) {
