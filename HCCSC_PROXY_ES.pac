@@ -827,6 +827,11 @@ function FindProxyForURL(url, host) {
   	   return "DIRECT";
 	}
 
+	// We want to send all waterford 3
+	if (dnsDomainIs(host, "s2.symcb.com")) {
+  	   return "DIRECT";
+	}
+
 	 // do not proxy these sites
      switch (host) {
           case "fw.hccsc.k12.in.us":     // hccsc mdm device
