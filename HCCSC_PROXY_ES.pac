@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.34P, Oct 17th, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.36P, Oct 17th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -829,6 +829,21 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all waterford 3
 	if (dnsDomainIs(host, "s2.symcb.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all IXL 1
+	if (dnsDomainIs(host, ".ixl.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all IXL 2
+	if (dnsDomainIs(host, ".casalemedia.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all SurveyGold Site
+	if (dnsDomainIs(host, ".surveygoldcloud.com")) {
   	   return "DIRECT";
 	}
 
