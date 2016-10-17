@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.29P, Oct 17th, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.30P, Oct 17th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -799,6 +799,11 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all prodigygame.com 2
 	if (dnsDomainIs(host, ".prodigygame.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all prodigygame.com 3
+	if (dnsDomainIs(host, "prodigygame.com")) {
   	   return "DIRECT";
 	}
 
