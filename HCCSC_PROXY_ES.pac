@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.39P, Oct 20th, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.40P, Oct 20th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -865,6 +865,26 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all EPIC! 2
 	if (dnsDomainIs(host, ".oneskyapp.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Thinkcentral 102016
+	if (dnsDomainIs(host, "ds-aksb-a.akamaihd.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Thinkcentral 102016-1
+	if (dnsDomainIs(host, ".symcd.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all SplashMath
+	if (dnsDomainIs(host, ".splashmath.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Starfall
+	if (dnsDomainIs(host, ".starfall.com")) {
   	   return "DIRECT";
 	}
 
