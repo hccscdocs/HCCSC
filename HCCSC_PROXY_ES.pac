@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.45P, Oct 25th, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.46P, Oct 26th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -900,6 +900,11 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Soundcloud for KM
 	if (dnsDomainIs(host, ".soundcloud.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Soundcloud 2
+	if (dnsDomainIs(host, "soundcloud.com")) {
   	   return "DIRECT";
 	}
 
