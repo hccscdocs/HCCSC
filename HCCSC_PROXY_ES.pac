@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.48P, Oct 27th, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.49P, Oct 27th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -925,6 +925,26 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Soundcloud 3
 	if (dnsDomainIs(host, ".sndcdn.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all epic 3
+	if (dnsDomainIs(host, "api.mixpanel.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all reflex 2
+	if (dnsDomainIs(host, ".adobe.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all SeeSaw
+	if (dnsDomainIs(host, ".seesaw.me")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Canvas 5
+	if (dnsDomainIs(host, ".canvaslms.com")) {
   	   return "DIRECT";
 	}
 
