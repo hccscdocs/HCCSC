@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.46P, Oct 26th, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.47P, Oct 27th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -920,6 +920,11 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Waterford Main data
 	if (dnsDomainIs(host, "dhbku9qzbk9wm.cloudfront.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Soundcloud 3
+	if (dnsDomainIs(host, "sndcdn.com")) {
   	   return "DIRECT";
 	}
 
