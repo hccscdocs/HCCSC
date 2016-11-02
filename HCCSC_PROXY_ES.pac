@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.49P, Oct 27th, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.50P, Nov 02nd, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -945,6 +945,21 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Canvas 5
 	if (dnsDomainIs(host, ".canvaslms.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Canvas-Scholastic Videos
+	if (dnsDomainIs(host, "hlsak-a.akamaihd.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Canvas-Scholastic Videos2
+	if (dnsDomainIs(host, "fast.fonts.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Canvas-Scholastic Videos3
+	if (dnsDomainIs(host, ".googletagmanager.com")) {
   	   return "DIRECT";
 	}
 
