@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.54P, Nov 3rd, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.55P, Nov 7th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -933,6 +933,11 @@ function FindProxyForURL(url, host) {
   	   return "DIRECT";
 	}
 
+	// We want to send all PBS.org
+	if (dnsDomainIs(host, ".pbs.org")) {
+  	   return "DIRECT";
+	}
+
 	// We want to send all epic 3
 	if (dnsDomainIs(host, "api.mixpanel.com")) {
   	   return "DIRECT";
@@ -990,6 +995,16 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all KidRex
 	if (dnsDomainIs(host, "kidrex.org")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Puffin Academy
+	if (dnsDomainIs(host, ".cloudmosa.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Puffin Academy 1
+	if (dnsDomainIs(host, ".flashbrowser.com")) {
   	   return "DIRECT";
 	}
 
