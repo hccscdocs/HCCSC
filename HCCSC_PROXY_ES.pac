@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.53P, Nov 3rd, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.54P, Nov 3rd, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -68,6 +68,11 @@ function FindProxyForURL(url, host) {
     	 if (isInNet(host, "199.83.168.180", "255.255.255.255")) {
         	  return "PROXY 127.0.0.1:48890";
      	}
+     	
+// Allow Puffin Academy App 
+    	 if (isInNet(host, "216.218.203.152", "255.255.255.255")) {
+        	  return "DIRECT";
+     	}     	
        }
 
 	// Utility 
