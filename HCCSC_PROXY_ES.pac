@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.55P, Nov 7th, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.57P, Nov 7th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -69,8 +69,28 @@ function FindProxyForURL(url, host) {
         	  return "PROXY 127.0.0.1:48890";
      	}
      	
-// Allow Puffin Academy App 
-    	 if (isInNet(host, "216.218.203.152", "255.255.255.255")) {
+// Allow Puffin Academy App IP Range 1 
+    	 if (isInNet(host, "216.218.223.32", "255.255.255.224")) {
+        	  return "DIRECT";
+     	}
+     	     	
+// Allow Puffin Academy App IP Range 2 
+    	 if (isInNet(host, "216.218.220.0", "255.255.255.224")) {
+        	  return "DIRECT";
+     	}
+     	     	
+// Allow Puffin Academy App IP Range 3 
+    	 if (isInNet(host, "216.218.202.0", "255.255.254.0")) {
+        	  return "DIRECT";
+     	}
+     	     	
+// Allow Puffin Academy App IP Range 4 
+    	 if (isInNet(host, "184.105.82.0", "255.255.254.0")) {
+        	  return "DIRECT";
+     	}
+     	     	
+// Allow Puffin Academy App IP Range 5 
+    	 if (isInNet(host, "54.67.115.236", "255.255.255.255")) {
         	  return "DIRECT";
      	}     	
        }
