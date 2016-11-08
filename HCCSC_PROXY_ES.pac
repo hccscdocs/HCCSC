@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.57P, Nov 7th, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.58P, Nov 8th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -1025,6 +1025,11 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Puffin Academy 1
 	if (dnsDomainIs(host, ".flashbrowser.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all BrainPop
+	if (dnsDomainIs(host, ".brainpop.com")) {
   	   return "DIRECT";
 	}
 
