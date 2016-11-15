@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us MS PAC file version 3.33PT, Oct 10th, 2016-JFH";
+    pacver = "hccsc.k12.in.us MS PAC file version 3.34P, Nov 15th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -680,6 +680,26 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all SumDog-Apple
 	if (dnsDomainIs(host, "apps.itunes.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all House.gov
+	if (dnsDomainIs(host, ".house.gov")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all House.gov2
+	if (dnsDomainIs(host, "house.gov")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all in.gov
+	if (dnsDomainIs(host, ".in.gov")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all la.gov
+	if (dnsDomainIs(host, ".la.gov")) {
   	   return "DIRECT";
 	}
 

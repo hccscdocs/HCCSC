@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 2.94P, Nov 15th, 2016-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 2.96P, Nov 15th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -61,7 +61,8 @@ function FindProxyForURL(url, host) {
         if (shExpMatch(host, "*.c.docs.google.com")){return "DIRECT";}
         if (shExpMatch(host, "large-uploads.l.google.com")){return "DIRECT";}
         if (shExpMatch(host, "*.googleapis.com")){return "DIRECT";}
-        
+        if (shExpMatch(host, "*.google-analytics.com")){return "DIRECT";}
+
 	// We want to send all traffic to hccsc.k12.in.us browser direct
 	if (dnsDomainIs(host, ".hccsc.k12.in.us")) {
   	   return "DIRECT";
@@ -698,6 +699,21 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all House.gov
 	if (dnsDomainIs(host, ".house.gov")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all House.gov2
+	if (dnsDomainIs(host, "house.gov")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all in.gov
+	if (dnsDomainIs(host, ".in.gov")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all la.gov
+	if (dnsDomainIs(host, ".la.gov")) {
   	   return "DIRECT";
 	}
 
