@@ -1,0 +1,4 @@
+Host	http://www.newsela.com
+Host	https://newsela.com
+Host	https://drnsu3ybjb25l.cloudfront.net
+Host	https://d284gedng9vuu0.cloudfront.net
