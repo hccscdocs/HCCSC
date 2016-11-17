@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.64P, Nov 17th, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.65P, Nov 17th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -1084,7 +1084,7 @@ function FindProxyForURL(url, host) {
 	}
 
 	// We want to send all Padlet 5
-	if (dnsDomainIs(host, "onesignal.com:")) {
+	if (dnsDomainIs(host, "onesignal.com")) {
   	   return "DIRECT";
 	}
 
