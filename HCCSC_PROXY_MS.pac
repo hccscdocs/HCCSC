@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us MS PAC file version 3.34P, Nov 15th, 2016-JFH";
+    pacver = "hccsc.k12.in.us MS PAC file version 3.35P, Nov 23rd, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -700,6 +700,55 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all la.gov
 	if (dnsDomainIs(host, ".la.gov")) {
+  	   return "DIRECT";
+	}
+	// We want to send all Canvas 5
+	if (dnsDomainIs(host, ".canvaslms.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Canvas-Scholastic Videos
+	if (dnsDomainIs(host, "hlsak-a.akamaihd.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Canvas-Scholastic Videos2
+	if (dnsDomainIs(host, "fast.fonts.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Canvas-Scholastic Videos3
+	if (dnsDomainIs(host, ".googletagmanager.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Canvas-Scholastic Videos3
+	if (dnsDomainIs(host, "players.brightcove.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Canvas-Scholastic Videos3
+	if (dnsDomainIs(host, ".brightcove.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Canvas Videos
+	if (dnsDomainIs(host, "assets.adobedtm.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Adobe
+	if (dnsDomainIs(host, ".adobe.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Nearpod
+	if (dnsDomainIs(host, ".nearpod.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Nearpod 1
+	if (dnsDomainIs(host, "nearpod.com")) {
   	   return "DIRECT";
 	}
 
