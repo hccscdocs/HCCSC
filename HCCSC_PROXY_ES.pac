@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.69P, Nov 22nd, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.70P, Nov 23nd, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -1115,6 +1115,16 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all MobyMax3
 	if (dnsDomainIs(host, "ortc-prd.realtime.co")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Nearpod
+	if (dnsDomainIs(host, ".nearpod.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Nearpod 1
+	if (dnsDomainIs(host, "nearpod.com")) {
   	   return "DIRECT";
 	}
 
