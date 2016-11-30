@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.70P, Nov 23nd, 2016-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.71P, Nov 30th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -1125,6 +1125,16 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Nearpod 1
 	if (dnsDomainIs(host, "nearpod.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all BloxyBuilder
+	if (dnsDomainIs(host, ".bloxelsbuilder.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all BloxyBuilder1
+	if (dnsDomainIs(host, "stats.unity3d.com")) {
   	   return "DIRECT";
 	}
 
