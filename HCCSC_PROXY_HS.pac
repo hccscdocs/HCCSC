@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 2.99P, Dec 7th, 2016-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.00P, Dec 16th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -794,6 +794,16 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all TestNav3
 	if (dnsDomainIs(host, ".comodoca.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Autodesk
+	if (dnsDomainIs(host, ".autodesk.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Autodesk 1
+	if (dnsDomainIs(host, ".autodesk360.com")) {
   	   return "DIRECT";
 	}
 
