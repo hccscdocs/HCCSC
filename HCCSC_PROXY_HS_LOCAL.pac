@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 3.04PL-HS, Dec 19th, 2016-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.05PL-HS, Dec 19th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -23,6 +23,11 @@ function FindProxyForURL(url, host) {
     if (isInNet(myIpAddress(), "172.16.0.0", "255.255.0.0"))
         return "DIRECT";
         
+// If the IP address of the local machine is within a defined
+// subnet, send to a specific proxy.
+    if (isInNet(myIpAddress(), "172.27.0.0", "255.255.0.0"))
+        return "DIRECT";
+                
 	// Test to see if host is an IP address
 	reip = /^\d+\.\d+\.\d+\.\d+$/g;
 	if (reip.test(host)) {
