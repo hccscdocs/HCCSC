@@ -1183,13 +1183,18 @@ function FindProxyForURL(url, host) {
   	   return "DIRECT";
 	}
 
-	// We want to send all Padlet 010417-2
+	// We want to send all Canvas 010417
 	if (dnsDomainIs(host, ".view-api.box.com")) {
   	   return "DIRECT";
 	}
 
-	// We want to send all Padlet 010417-2
+	// We want to send all Canvas 010417
 	if (dnsDomainIs(host, "view-api.box.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Padlet 010417-3
+	if (dnsDomainIs(host, ".cloudflare.com")) {
   	   return "DIRECT";
 	}
 
