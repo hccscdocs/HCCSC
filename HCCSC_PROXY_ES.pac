@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.77P, Jan 4th, 2017-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.78P, Jan 5th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -120,7 +120,8 @@ function FindProxyForURL(url, host) {
         if (shExpMatch(host, "large-uploads.l.google.com")){return "DIRECT";}
         if (shExpMatch(host, "*.googleapis.com")){return "DIRECT";}
         if (shExpMatch(host, "*.google-analytics.com")){return "DIRECT";}
-
+        if (shExpMatch(host, "*.googlevideo.com")){return "DIRECT";}
+        
 	// We want to send all traffic to hccsc.k12.in.us browser direct
 	if (dnsDomainIs(host, ".hccsc.k12.in.us")) {
   	   return "DIRECT";
