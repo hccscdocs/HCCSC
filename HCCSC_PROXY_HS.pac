@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 3.04P-HS, Dec 19th, 2016-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.05P-HS, Jan 5th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -63,6 +63,7 @@ function FindProxyForURL(url, host) {
         if (shExpMatch(host, "*.googleapis.com")){return "DIRECT";}
         if (shExpMatch(host, "*.google-analytics.com")){return "DIRECT";}
         if (shExpMatch(host, "safebrowsing.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "safebrowsing-cache.google.com")){return "DIRECT";}
         
 	// We want to send all traffic to hccsc.k12.in.us browser direct
 	if (dnsDomainIs(host, ".hccsc.k12.in.us")) {
@@ -823,8 +824,13 @@ function FindProxyForURL(url, host) {
   	   return "DIRECT";
 	}
 
-	// We want to send all Canvas Issues 12-2016 2
+	// We want to send all NTN echo 
 	if (dnsDomainIs(host, ".echo-ntn.org")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Canvas Issues 010517
+	if (dnsDomainIs(host, "instructure.codecogs.com")) {
   	   return "DIRECT";
 	}
 
