@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 3.06P-HS-RESTRICTED, Jan 9th, 2017-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.06P-HS-RESTRICTED, Jan 11th, 2017-JFH";
 
     
     // Convert everything to lower case.
