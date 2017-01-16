@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 3.06P-HS-RESTRICTED, Jan 11th, 2017-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.07P-HS-RESTRICTED, Jan 16th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -43,6 +43,27 @@ function FindProxyForURL(url, host) {
 		alert("PAC File Version:  " + pacver);
 	}
 
+	//These Google Sites need to not be proxied or they will not work
+        if (shExpMatch(host, "clients?.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "accounts.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "upload.video.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "translate.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "*.drive.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "drive.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "docs.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "sheets.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "slides.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "googledrive.com")){return "DIRECT";}
+        if (shExpMatch(host, "*.docs.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "gg.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "apis.google.com")){return "DIRECT";} 
+        if (shExpMatch(host, "script.google.com")){return "DIRECT";}   
+        if (shExpMatch(host, "*.c.docs.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "large-uploads.l.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "*.googleapis.com")){return "DIRECT";}
+        if (shExpMatch(host, "*.google-analytics.com")){return "DIRECT";}
+        if (shExpMatch(host, "safebrowsing.google.com")){return "DIRECT";}
+        if (shExpMatch(host, "safebrowsing-cache.google.com")){return "DIRECT";}
         
 	// We want to send all traffic to hccsc.k12.in.us browser direct
 	if (dnsDomainIs(host, ".hccsc.k12.in.us")) {
@@ -836,16 +857,6 @@ function FindProxyForURL(url, host) {
 
 	// Block URL FULL RESTRICTION
 	if (dnsDomainIs(host, "youtube.com")) {
-  	   return "PROXY 127.0.0.1:48890";
-	}
-
-	// Block URL FULL RESTRICTIONt
-	if (dnsDomainIs(host, ".google.com")) {
-  	   return "PROXY 127.0.0.1:48890";
-	}
-
-	// Block URL FULL RESTRICTIONt
-	if (dnsDomainIs(host, "google.com")) {
   	   return "PROXY 127.0.0.1:48890";
 	}
 
