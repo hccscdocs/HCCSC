@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.78P, Jan 5th, 2017-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.79P, Jan 17th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -1206,6 +1206,11 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Padlet 010417-3
 	if (dnsDomainIs(host, ".gravatar.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all ISTEP data
+	if (dnsDomainIs(host, ".pearsonperspective.com")) {
   	   return "DIRECT";
 	}
 
