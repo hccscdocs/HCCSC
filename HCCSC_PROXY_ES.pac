@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.80P, Jan 17th, 2017-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.81P, Jan 17th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -1226,6 +1226,31 @@ function FindProxyForURL(url, host) {
 
 	// We want to send The Calculator3
 	if (dnsDomainIs(host, ".creativeapis.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send The Calculator3
+	if (dnsDomainIs(host, ".g.doubleclick.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send The Calculator3
+	if (dnsDomainIs(host, ".googlesyndication.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send The Calculator3
+	if (dnsDomainIs(host, ".smaato.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send The Calculator3
+	if (dnsDomainIs(host, ".googleadservices.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send The Calculator3
+	if (dnsDomainIs(host, ".admob.com")) {
   	   return "DIRECT";
 	}
 
