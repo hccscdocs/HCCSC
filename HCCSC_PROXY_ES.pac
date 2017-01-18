@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.81P, Jan 17th, 2017-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.82P, Jan 18th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -1251,6 +1251,56 @@ function FindProxyForURL(url, host) {
 
 	// We want to send The Calculator3
 	if (dnsDomainIs(host, ".admob.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send The Calculator Pro
+	if (dnsDomainIs(host, ".admob.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send The Calculator Pro
+	if (dnsDomainIs(host, "control.kochava.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send The Calculator Pro
+	if (dnsDomainIs(host, "ad.atdmt.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send The Calculator Pro
+	if (dnsDomainIs(host, "ads.mp.mydas.mobi")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send The Calculator Pro
+	if (dnsDomainIs(host, "optimized-by.rubiconproject.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send The Calculator Pro
+	if (dnsDomainIs(host, "ads.mopub.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send The Calculator Pro
+	if (dnsDomainIs(host, "3g.appmessages.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send The Calculator Pro
+	if (dnsDomainIs(host, ".apalon.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send The Calculator Pro
+	if (dnsDomainIs(host, "bannerwall.herewetest.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send The Calculator Pro
+	if (dnsDomainIs(host, ".digicert.com")) {
   	   return "DIRECT";
 	}
 
