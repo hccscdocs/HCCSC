@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us MS PAC file version 3.41P, Dec 27th, 2016-JFH";
+    pacver = "hccsc.k12.in.us MS PAC file version 3.42P, Feb 1st, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -813,6 +813,11 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Canvas Issues 12-2016 2
 	if (dnsDomainIs(host, ".echo-ntn.org")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all SafeSchools
+	if (dnsDomainIs(host, ".safeschools.com")) {
   	   return "DIRECT";
 	}
 
