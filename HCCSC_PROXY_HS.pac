@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 3.06P-HS, Feb 1st, 2017-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.07P-HS, Feb 8th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -836,6 +836,11 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all SafeSchools
 	if (dnsDomainIs(host, ".safeschools.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send Adobe App Domain
+	if (dnsDomainIs(host, ".symcb.com")) {
   	   return "DIRECT";
 	}
 
