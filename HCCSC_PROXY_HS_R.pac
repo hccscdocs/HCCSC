@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 3.10P-HS-RESTRICTED, Feb 22nd, 2017-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.11P-HS-RESTRICTED, Feb 22nd, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -33,6 +33,10 @@ function FindProxyForURL(url, host) {
      	}
      // Check for an internal 172.28.x IP address
     	 if (isInNet(host, "172.16.0.0", "255.255.0.0")) {
+        	  return "DIRECT";
+     	}
+     	     // Check for an Kerbal Space Program IP
+    	 if (isInNet(host, "216.58.192.202", "255.255.255.255")) {
         	  return "DIRECT";
      	}
        }
