@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.88P, Feb 22nd, 2017-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.89P, Feb 22nd, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -1336,6 +1336,16 @@ function FindProxyForURL(url, host) {
 
 	// We want to send Pict Collage2
 	if (dnsDomainIs(host, ".pic-collage.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send Pict Collage3
+	if (dnsDomainIs(host, ".comodoca.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send Pict Collage3
+	if (dnsDomainIs(host, ".vungle.com")) {
   	   return "DIRECT";
 	}
 
