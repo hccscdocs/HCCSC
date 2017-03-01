@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 3.08P-HS, Feb 9th, 2017-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.09P-HS, March 1st, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -856,6 +856,21 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Outlook 020817-2
 	if (dnsDomainIs(host, ".msedge.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all DNA Site 030117
+	if (dnsDomainIs(host, ".dnaftp.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all DNA Site 030117
+	if (dnsDomainIs(host, ".cshl.edu")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all HCCSC Website Issues
+	if (dnsDomainIs(host, ".schoolblocks.com")) {
   	   return "DIRECT";
 	}
 
