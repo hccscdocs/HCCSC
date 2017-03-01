@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 3.13P-HS-RESTRICTED, march 1st, 2017-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.14P-HS-RESTRICTED, March 1st, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -71,6 +71,11 @@ function FindProxyForURL(url, host) {
         
 	// We want to send all traffic to hccsc.k12.in.us browser direct
 	if (dnsDomainIs(host, ".hccsc.k12.in.us")) {
+  	   return "DIRECT";
+	}
+        
+	// We want to send all traffic to ENA Filter .Pac direct
+	if (dnsDomainIs(host, "marion.mobile.websafe.ena.net")) {
   	   return "DIRECT";
 	}
 
