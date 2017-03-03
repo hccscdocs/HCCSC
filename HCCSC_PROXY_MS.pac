@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us MS PAC file version 3.43P, March 2nd, 2016-JFH";
+    pacver = "hccsc.k12.in.us MS PAC file version 3.44P, March 3rd, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -838,6 +838,21 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Outlook 020817-2
 	if (dnsDomainIs(host, ".msedge.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Kerbal App
+	if (dnsDomainIs(host, ".unity3d.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Kerbal App2
+	if (dnsDomainIs(host, "kerbalspaceprogram.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Kerbal App2
+	if (dnsDomainIs(host, ".kerbalspaceprogram.com")) {
   	   return "DIRECT";
 	}
 
