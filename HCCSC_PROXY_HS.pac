@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 3.10P-HS, March 1st, 2017-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.11P-HS, March 6th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -871,6 +871,11 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all HCCSC Website Issues
 	if (dnsDomainIs(host, ".schoolblocks.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all xtramath site
+	if (dnsDomainIs(host, ".xtramath.org")) {
   	   return "DIRECT";
 	}
 
