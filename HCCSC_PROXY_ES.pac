@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.92P, March 7th, 2017-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.93P, March 7th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -1420,12 +1420,12 @@ function FindProxyForURL(url, host) {
 	}
 
 	// We want to send all Scorative App
-	if (dnsDomainIs(host, ".scorative.com")) {
+	if (dnsDomainIs(host, ".socrative.com")) {
   	   return "DIRECT";
 	}
 
 	// We want to send all Scorative App
-	if (dnsDomainIs(host, "scorative.com")) {
+	if (dnsDomainIs(host, "socrative.com")) {
   	   return "DIRECT";
 	}
 
