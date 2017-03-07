@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 3.14P-HS-RESTRICTED, March 1st, 2017-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.15P-HS-RESTRICTED, March 7th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -890,6 +890,61 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all HCCSC Website Issues
 	if (dnsDomainIs(host, ".schoolblocks.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all IU
+	if (dnsDomainIs(host, ".indiana.edu")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Connect ED
+	if (dnsDomainIs(host, ".tegrity.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all stardate
+	if (dnsDomainIs(host, ".stardate.org")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all stardate2
+	if (dnsDomainIs(host, "stardate.org")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Typing
+	if (dnsDomainIs(host, ".typing.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all NitroType
+	if (dnsDomainIs(host, ".nitrotype.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all xtramath
+	if (dnsDomainIs(host, ".xtramath.org")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all xtramath
+	if (dnsDomainIs(host, "xtramath.org")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all IU 2
+	if (dnsDomainIs(host, ".iu.edu")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Educreations
+	if (dnsDomainIs(host, ".educreations.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Educreations2
+	if (dnsDomainIs(host, "cloud.typography.com")) {
   	   return "DIRECT";
 	}
 
