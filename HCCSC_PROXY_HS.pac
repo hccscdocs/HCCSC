@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 3.12P-HS, March 7th, 2017-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.13P-HS, March 7th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -881,6 +881,51 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all IU site
 	if (dnsDomainIs(host, ".indiana.edu")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all xtramath
+	if (dnsDomainIs(host, "xtramath.org")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all IU 2
+	if (dnsDomainIs(host, ".iu.edu")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Educreations
+	if (dnsDomainIs(host, ".educreations.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Educreations2
+	if (dnsDomainIs(host, "cloud.typography.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Apex 030617
+	if (dnsDomainIs(host, "api.tumra.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Apex 030617
+	if (dnsDomainIs(host, "js-agent.newrelic.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Apex 030617
+	if (dnsDomainIs(host, ".nmai.si.edu")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Apex 030617
+	if (dnsDomainIs(host, "m.addthis.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Apex 030617-2
+	if (dnsDomainIs(host, ".edgate.com")) {
   	   return "DIRECT";
 	}
 
