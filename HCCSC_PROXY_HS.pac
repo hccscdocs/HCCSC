@@ -929,7 +929,7 @@ function FindProxyForURL(url, host) {
   	   return "DIRECT";
 	}
 
-	// We want to send all Apex 030617-2
+	// We want to send all JA site
 	if (dnsDomainIs(host, ".ja.org")) {
   	   return "DIRECT";
 	}
