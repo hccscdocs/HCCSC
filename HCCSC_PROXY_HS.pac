@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 3.13P-HS, March 7th, 2017-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.14P-HS, March 8th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -926,6 +926,11 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Apex 030617-2
 	if (dnsDomainIs(host, ".edgate.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Apex 030617-2
+	if (dnsDomainIs(host, ".ja.org")) {
   	   return "DIRECT";
 	}
 
