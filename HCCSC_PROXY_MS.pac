@@ -1006,6 +1006,11 @@ function FindProxyForURL(url, host) {
   	   return "DIRECT";
 	}
 
+	// We want to send all weebly App
+	if (dnsDomainIs(host, ".weebly.com")) {
+  	   return "DIRECT";
+	}
+
 	 // do not proxy these sites
      switch (host) {
           case "fw.hccsc.k12.in.us":     // hccsc mdm device
