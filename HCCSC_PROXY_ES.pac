@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.95P, March 13th, 2017-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.96P, March 15th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -1441,6 +1441,51 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Sqord App
 	if (dnsDomainIs(host, "s3-us-west-2.amazonaws.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Kahoot2 App
+	if (dnsDomainIs(host, "kahoot.it")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all hc App
+	if (dnsDomainIs(host, ".healthychildren.org")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all CalcProApp Ads
+	if (dnsDomainIs(host, ".nexage.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all CalcProApp Ads
+	if (dnsDomainIs(host, ".advertising.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all CalcProApp Ads
+	if (dnsDomainIs(host, ".adap.tv")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all CalcProApp Ads
+	if (dnsDomainIs(host, ".pubmatic.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all CalcProApp Ads
+	if (dnsDomainIs(host, ".openx.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all CalcProApp Ads
+	if (dnsDomainIs(host, ".criteo.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all CalcProApp Ads
+	if (dnsDomainIs(host, ".herewetest.com")) {
   	   return "DIRECT";
 	}
 
