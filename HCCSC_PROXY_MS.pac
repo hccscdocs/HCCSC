@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us MS PAC file version 3.53P, March 13th, 2016-JFH";
+    pacver = "hccsc.k12.in.us MS PAC file version 3.54P, March 13th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -988,6 +988,16 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Kahoot2 App
 	if (dnsDomainIs(host, "kahoot.it")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all eia.gov
+	if (dnsDomainIs(host, ".eia.gov")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all hc App
+	if (dnsDomainIs(host, ".healthychildren.org")) {
   	   return "DIRECT";
 	}
 
