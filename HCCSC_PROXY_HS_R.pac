@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 3.22P-HS-RESTRICTED, March 8th, 2017-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.23P-HS-RESTRICTED, March 15th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -1010,6 +1010,11 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all ConnectED
 	if (dnsDomainIs(host, "glencoe.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all eia.gov
+	if (dnsDomainIs(host, ".eia.gov")) {
   	   return "DIRECT";
 	}
 
