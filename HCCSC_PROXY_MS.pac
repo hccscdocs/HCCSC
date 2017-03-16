@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us MS PAC file version 3.56P, March 13th, 2016-JFH";
+    pacver = "hccsc.k12.in.us MS PAC file version 3.57P, March 16th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -1008,6 +1008,21 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all weebly App
 	if (dnsDomainIs(host, ".weebly.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Sqord2 App
+	if (dnsDomainIs(host, "sqord.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Sqord2 App
+	if (dnsDomainIs(host, ".fontawesome.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Sqord2 App
+	if (dnsDomainIs(host, "clients4.google.com")) {
   	   return "DIRECT";
 	}
 
