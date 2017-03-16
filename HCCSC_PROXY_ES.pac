@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.97P, March 16th, 2017-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.98P, March 16th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -1491,6 +1491,46 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all HCPTL
 	if (dnsDomainIs(host, ".huntingtonpub.lib.in.us")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all HCPTL2
+	if (dnsDomainIs(host, ".typekit.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all HCPTL2
+	if (dnsDomainIs(host, "stats.wp.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all HCPTL2
+	if (dnsDomainIs(host, "s0.wp.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all HCPTL2
+	if (dnsDomainIs(host, "s.gravatar.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all HCPTL2
+	if (dnsDomainIs(host, "platform.linkedin.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all HCPTL2
+	if (dnsDomainIs(host, "assets.pinterest.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all General Access
+	if (dnsDomainIs(host, ".ena.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all General Access
+	if (dnsDomainIs(host, ".ena.com")) {
   	   return "DIRECT";
 	}
 
