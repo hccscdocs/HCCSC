@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.96P, March 15th, 2017-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.97P, March 16th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -1486,6 +1486,11 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all CalcProApp Ads
 	if (dnsDomainIs(host, ".herewetest.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all HCPTL
+	if (dnsDomainIs(host, ".huntingtonpub.lib.in.us")) {
   	   return "DIRECT";
 	}
 
