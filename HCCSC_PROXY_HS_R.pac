@@ -1028,13 +1028,38 @@ function FindProxyForURL(url, host) {
   	   return "DIRECT";
 	}
 
-	// We want to send all Kahoot2 App
+	// We want to send all hc App
 	if (dnsDomainIs(host, ".healthychildren.org")) {
   	   return "DIRECT";
 	}
 
 	// We want to send all weebly
 	if (dnsDomainIs(host, ".weebly.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Sqord App
+	if (dnsDomainIs(host, ".sqord.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Sqord App
+	if (dnsDomainIs(host, "s3-us-west-2.amazonaws.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Sqord2 App
+	if (dnsDomainIs(host, "sqord.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Sqord2 App
+	if (dnsDomainIs(host, ".fontawesome.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all Sqord2 App
+	if (dnsDomainIs(host, "clients4.google.com")) {
   	   return "DIRECT";
 	}
 
