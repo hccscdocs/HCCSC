@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us ES PAC file version 1.98P, March 16th, 2017-JFH";
+    pacver = "hccsc.k12.in.us ES PAC file version 1.99P, March 16th, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -1531,6 +1531,21 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all General Access
 	if (dnsDomainIs(host, ".ena.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all readworks
+	if (dnsDomainIs(host, ".readworks.org")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all readworks
+	if (dnsDomainIs(host, "dee90g5hejuxs.cloudfront.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all readworks
+	if (dnsDomainIs(host, "d2zah9y47r7bi2.cloudfront.net")) {
   	   return "DIRECT";
 	}
 
