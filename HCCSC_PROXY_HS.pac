@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 3.20P-HS, March 14th, 2017-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.21P-HS, March 21st, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -1004,6 +1004,31 @@ function FindProxyForURL(url, host) {
   	   return "DIRECT";
 	}
 
+	// We want to send all TWITTER HS App
+	if (dnsDomainIs(host, ".twitter.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all TWITTER HS App
+	if (dnsDomainIs(host, "twitter.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all TWITTER HS App
+	if (dnsDomainIs(host, "pbs.twimg.com")) {
+  	   return "DIRECT";
+	}
+	
+	// We want to send all TWITTER HS App
+	if (dnsDomainIs(host, "abs.twimg.com")) {
+  	   return "DIRECT";
+	}
+	
+	// We want to send all TWITTER HS App
+	if (dnsDomainIs(host, ".digicert.com")) {
+  	   return "DIRECT";
+	}
+
      // do not proxy these sites
      switch (host) {
           case "fw.hccsc.k12.in.us":     // hccsc mdm device
@@ -1035,10 +1060,6 @@ function FindProxyForURL(url, host) {
   	   return "PROXY 127.0.0.1:48890";
 	}
 
-	// Block Twitter
-	if (dnsDomainIs(host, ".twitter.com")) {
-  	   return "PROXY 127.0.0.1:48890";
-	}
     // Block mobicip.com
 	if (dnsDomainIs(host, ".mobicip.com")) {
   	   return "PROXY 127.0.0.1:48890";
