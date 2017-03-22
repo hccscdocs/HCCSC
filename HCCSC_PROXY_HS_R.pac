@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 3.25P-HS-RESTRICTED, March 15th, 2017-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.26P-HS-RESTRICTED, March 22nd, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -1104,10 +1104,6 @@ function FindProxyForURL(url, host) {
   	   return "PROXY 127.0.0.1:48890";
 	}
 
-	// Block Twitter
-	if (dnsDomainIs(host, ".twitter.com")) {
-  	   return "PROXY 127.0.0.1:48890";
-	}
     // Block mobicip.com
 	if (dnsDomainIs(host, ".mobicip.com")) {
   	   return "PROXY 127.0.0.1:48890";
