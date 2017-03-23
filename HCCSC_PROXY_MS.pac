@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us MS PAC file version 3.57P, March 16th, 2016-JFH";
+    pacver = "hccsc.k12.in.us MS PAC file version 3.58P, March 16th, 2016-JFH";
 
     
     // Convert everything to lower case.
@@ -1023,6 +1023,11 @@ function FindProxyForURL(url, host) {
 
 	// We want to send all Sqord2 App
 	if (dnsDomainIs(host, "clients4.google.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all IYA Survey
+	if (dnsDomainIs(host, ".qualtrics.com")) {
   	   return "DIRECT";
 	}
 
