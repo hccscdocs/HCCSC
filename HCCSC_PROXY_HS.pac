@@ -1,6 +1,6 @@
 function FindProxyForURL(url, host) {
 
-    pacver = "hccsc.k12.in.us PAC file version 3.26P-HS, April 26th, 2017-JFH";
+    pacver = "hccsc.k12.in.us PAC file version 3.27P-HS, May 2nd, 2017-JFH";
 
     
     // Convert everything to lower case.
@@ -1071,6 +1071,21 @@ function FindProxyForURL(url, host) {
 	
 	// We want to send all Glogster
 	if (dnsDomainIs(host, ".strikingly.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all ACTFL List
+	if (dnsDomainIs(host, "BL-AAPPL-AMS-777299592.us-west-2.elb.amazonaws.com")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all ACTFL List
+	if (dnsDomainIs(host, "d3sn592to6vb64.cloudfront.net")) {
+  	   return "DIRECT";
+	}
+
+	// We want to send all ACTFL List
+	if (dnsDomainIs(host, "duhbaddmanamr.cloudfront.net")) {
   	   return "DIRECT";
 	}
 
