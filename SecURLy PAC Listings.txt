@@ -1,0 +1,17 @@
+// We want to send all Canvas DIRECT
+if(shExpMatch(host, "*.cloudfront.net"))		{return "DIRECT";}
+if(shExpMatch(host, "assets.adobedtm.com"))		{return "DIRECT";}
+if(shExpMatch(host, "dashboard.buddybuild.com"))		{return "DIRECT";}
+if(shExpMatch(host, "*.edu-apps.org"))		{return "DIRECT";}
+if(shExpMatch(host, "*.crashlytics.com"))		{return "DIRECT";}
+if(shExpMatch(host, "*.view-api.box.com"))		{return "DIRECT";}
+
+
+
+// We want to send all Educreations DIRECT
+if(shExpMatch(host, "*.educreations.com"))		{return "DIRECT";}
+if(shExpMatch(host, "cloud.typography.com"))		{return "DIRECT";}
+
+// We want to send all Waterford DIRECT
+if(shExpMatch(host, "*.waterford.org"))		{return "DIRECT";}
+if(shExpMatch(host, "*.waterfordearlylearning.org"))		{return "DIRECT";}
